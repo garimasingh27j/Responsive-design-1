@@ -1,0 +1,217 @@
+*{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Global */
+.container{
+  width: 80%;
+  margin: 0 auto;
+}
+
+body{
+  font-family: 'Roboto', sans-serif;
+}
+
+h3{
+    color: #212529;
+    margin: 20px 0px;
+}
+
+p, li{
+    color: #212529;
+    font-size: 14px;
+}
+
+/* Header */
+header{
+  width: 100%;
+  background-color: #353A40;
+  height: 60px;
+  padding: 0px 10px;
+}
+
+.logo{
+  float: left;
+  color: white;
+  font-size: 20px;
+  line-height: 60px;
+  cursor: pointer;
+}
+
+nav, .menu{
+  float: right;
+  cursor: pointer;
+}
+
+.menu{
+  font-size: 20px;
+  padding: 20px;
+  display: none;
+}
+
+i.fa.fa-bars{
+  color: white;
+}
+
+nav ul li{
+  display: inline-block;
+  padding: 20px;
+}
+
+nav ul li a{
+  color: grey;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+nav ul li a:hover, .selected a{
+  color: white;
+}
+
+/* Main-Visual */
+h2{
+  font-family: 'helvitika',sans-serif;
+  color: #212529;
+  margin-top: 25px;
+}
+
+span {
+  font-weight: lighter;
+  font-size: 22px;
+}
+
+.proj-desc{
+  display: flex;
+}
+
+.main-col{
+  background-color: #ccc;
+  margin-top: 25px;
+  width: auto;
+}
+
+.main-col img{
+  width: 100%;
+  height: auto;
+}
+
+.sidebar{
+  width:25%;
+  min-width: 200px;
+  margin-top:25px;
+  padding-left: 20px;
+}
+
+.list h3{
+  margin-top: 20px;
+}
+
+.list ul{
+  padding-left: 20px;
+  list-style-position:inside;
+}
+
+/* Boxes */
+.boxes{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.boxs{
+  flex-basis: 22%;
+}
+
+.boxs img {
+  margin-bottom: 15px;
+  width: 100%;
+}
+
+footer{
+  margin-top:20px;
+  color:#ffffff;
+  background-color: #353A40;
+  text-align: center;
+  height: 70px;
+ line-height: 70px;
+}
+
+footer p{
+  color: white;
+}
+
+@media (max-width: 900px){
+
+  .proj-desc{
+    flex-direction: column;
+  }
+  .main-col, .sidebar{
+    width:100%;
+  }
+
+  .main-col img{
+    width: 100%;
+  }
+
+  .sidebar{
+    min-width: 100px;
+    padding-left: 0px;
+  }
+
+  .boxs{
+    flex-basis: 45%;
+  }
+}
+
+/* Mobile and Tabs  */
+@media (max-width: 768px) {
+
+  .menu{
+    display: block;
+  }
+
+  nav{
+    position: absolute;
+    width: 100%;
+    background-color: #5f6368;
+    top: 60px;
+    left: -100%;
+    height: auto;
+    transition: 0.5s;
+  }
+
+ nav ul li{
+  display: block;
+  text-align: center;
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+ }
+
+ nav ul li a{
+   color: black;
+ }
+
+ nav.active{
+    left: 0px;
+  }
+
+  span.heading{
+    display: block;
+    padding-top: 10px;
+  }
+
+  .boxes{
+    flex-direction: column;
+  }
+
+  .boxs{
+    width:100%;
+  }
+
+  .boxs img{
+    width: 100%;
+  }
+
+}
